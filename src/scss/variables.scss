@@ -1,0 +1,133 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+
+/*Colors*/
+$white-color: #fff;
+$grey-color: #9aadb8;
+$grey-color-light: #91a3ad;
+$grey-color-dark: #616d72;
+$pink-dark-color: #ed145b;
+$black-color: #0e1012;
+$black-color-light: #353b3f;
+
+/*Fonts*/
+$font-roboto: 'Roboto', sans-serif;
+
+/*Font-Size*/
+$font-small: 12px;
+$font-medium: 14px;
+$font-big: 16px;
+
+/*Mixins*/
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+@mixin background-parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin align-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin customize-menu {
+  font-family: 'Gotham-Book';
+  color: $grey-color;
+  font-size: $font-medium;
+  text-transform: $uppercase;
+  padding: 5px 0;
+  position: relative;
+  transition: color .2s ease-out;
+
+  &:hover {
+    text-decoration: none;
+    color: $pink-dark-color;
+
+    &:after {
+      width: 40px;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 2px;
+    background: $pink-dark-color;
+    position: absolute;
+    top: 30px;   
+    left: 0;  
+    transition: all .4s ease;          
+  }
+}
+    
+
+@mixin customize-checkbox {
+  content: "";
+  border: solid 1px $grey-color;
+  background-color: transparent; 
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+@mixin buttons-animation {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  -webkit-transition: color 150ms $transition;
+  transition: color 150ms $transition;
+  font-family: 'Gotham-Medium';
+  font-size: $font-small;
+  margin-right: 20px;
+  background: transparent;
+  border: solid 2px $pink-dark-color;
+  color: $pink-dark-color;
+  text-transform: $uppercase;
+  padding: 10px 35px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    background: $pink-dark-color;
+    z-index: -1;
+    -webkit-transition: width 150ms $transition;
+    transition: width 150ms $transition;
+  }
+
+  &:hover {
+    color: $black-color;
+
+    &:after {
+      width: 110%;
+    }
+  }
+}
+
+@mixin transition-link {
+  color: $white-color;
+  transition: color .4s;
+}
+
+/*Styles*/
+$hidden: none;
+$show: block;
+$uppercase: uppercase;
+$transition: ease-in-out;

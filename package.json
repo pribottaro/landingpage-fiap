@@ -1,0 +1,30 @@
+{
+  "name": "fiap",
+  "version": "1.0.0",
+  "description": "Landing Page FIAP",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pribottaro/landingpage-fiap.git"
+  },
+  "author": "Priscila Bottaro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pribottaro/landingpage-fiap/issues"
+  },
+  "homepage": "https://github.com/pribottaro/landingpage-fiap#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.0",
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper": "^1.0.1",
+    "typed.js": "^2.0.11"
+  }
+}
